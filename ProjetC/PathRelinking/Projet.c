@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 void fonction(){
-  printf("test);
+  printf("test");
 }
 int main()
 {
