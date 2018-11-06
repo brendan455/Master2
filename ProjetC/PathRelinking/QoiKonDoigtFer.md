@@ -15,9 +15,8 @@ Repertoire du programme contenant
   >>Repertoire toy_example :
     Toy.??? (exemple)
 
-
-
 Format d'entrée = Format SMMB-ACO / format WTCCC / Fichier de paramètres
+
 
 
 
