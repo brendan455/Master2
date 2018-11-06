@@ -3,17 +3,17 @@ Principe du projet :
 Notre binome doit réaliser :
 
 Un programme de detection de pattern d'épistasie dans des données génétiques
->>> Nous devons implémenter
+> Nous devons implémenter
 Uniquement une méthode de Path-relinking
 
 
 A rendre :
 Repertoire du programme contenant
   > Programme Avec Path-relinking
-  > Lauch_pathrelinking_toy_example.py ( fichier de lancement de notre méthode)
-  > Readme.md ( install, librairy utilisé, compilation)
-  > Repertoire toy_example
-    - Toy.??? (exemple)
+  Lauch_pathrelinking_toy_example.py ( fichier de lancement de notre méthode)
+  Readme.md ( install, librairy utilisé, compilation)
+  >>Repertoire toy_example
+    Toy.??? (exemple)
 
 
 
