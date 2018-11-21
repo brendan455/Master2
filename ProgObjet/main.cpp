@@ -2,6 +2,9 @@
 #include list.h
 #include machin.h
 
+#include <iostream> 
+using namespace std;
+
 
 
 void run(){
