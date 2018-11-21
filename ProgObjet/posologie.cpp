@@ -1,6 +1,6 @@
 // DENIAUD Brendan et AYRAULT David
 
-#include "psologie.h"
+#include "posologie.h"
 #include <iostream> 
 using namespace std;
 
