@@ -10,7 +10,8 @@ class Posologie
 {
 	private: // Attribut
 		int nombreDePrises;
-		std::string methodeDAdministation
+		std::string jsm
+		std::string temps
 
 	public: // Méthodes
 		// Constructeur
@@ -19,11 +20,16 @@ class Posologie
 		// Accesseurs
 		int getNbPrise();
 		void setNbPrise(int);
-		std::string getMethodeAdmin();
-		void setMethodeAdmin(std::string);
-		
+		std::string getJSM()
+		void getJSM(std::string)
+		std::string getTemps()
+		void getTemps(std::string)
+			
 		// Affichage
 		void afficherPosologie();
 };
 
 #endif
+
+
+
