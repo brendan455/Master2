@@ -1,35 +1,40 @@
 // DENIAUD Brendan et AIRAULT David
 
-#include "medicament.h"
-#include <iostream> 
-using namespace std;
+#pragma once
+#include <iostream>
+#include <string>
+#include <fstream>
+#include "Medicament.h"
 
-// Constructeur de Gene
-Medicament::Medicament(string nom, string laboratoire){ 
-	this->nom=nom;
-	this->laboratoire=laboratoire;
-}
+using namespace std
 
-// Accesseurs
-string Medicament::getNom(){
-	return this->nom;
-}
+private: // Attribut
+	string nom;
+	string laboratoire;
 
-void Medicament::setNom(string nom){
-	this->nom=nom;
-}
+public :
+	// Constructeur
+	Medicament::Medicament(string nom, string laboratoire){ 
+		this->nom=nom;
+		this->laboratoire=laboratoire;
+	}
 
-string Medicament::getLaboratoire(){
-	return this->laboratoire
-}
+	// Accesseurs
+	string Medicament::getNom(){
+		return this->nom;
+	}
+	void Medicament::setNom(string nom){
+		this->nom=nom;
+	}
+	string Medicament::getLaboratoire(){
+		return this->laboratoire
+	}
+	void Medicament::setLaboratoire(string laboratoire){
+		this->laboratoire=laboratoire;
+	}
 
-void Medicament::setLaboratoire(string laboratoire){
-	this->laboratoire=laboratoire;
-}
-
-// Affichage d'un objet de type Medicament
-void Gene::afficherMedicament(){
-	cout << "Le médicament est : " << this->nom << endl;
-	cout << "Le médicament est produit par le laboratoire : " << this->laboratoire << endl;	
-}
-
+	// Affichage d'un objet de type Medicament
+	void Medicament::afficherMedicament(){
+		cout << "Le médicament est : " << this->nom << endl;
+		cout << "Le médicament est produit par le laboratoire : " << this->laboratoire << endl;	
+	}
