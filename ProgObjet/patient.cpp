@@ -1,4 +1,4 @@
-// DENIAUD Brendan et AYRAULT David
+// DENIAUD Brendan et AIRAULT David
 
 #include "patient.h"
 
