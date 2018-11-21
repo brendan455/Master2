@@ -1,6 +1,9 @@
 #include main.hpp
-#include list.h
-#include machin.h
+#include <list>
+#include medicament.cpp
+#include patient.cpp
+
+
 
 #include <iostream> 
 using namespace std;
