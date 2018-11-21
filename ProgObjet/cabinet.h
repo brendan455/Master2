@@ -1,5 +1,3 @@
-
-
 #include <iostream>
 #include <string>
 #include <fstream>
@@ -14,13 +12,13 @@ namespace Cab;
 class Cabinet
 {
 	private: // Attribut
-	  std::string nom;
-   	std::string adresse;
-    std::list(Medecin) medecins;
-    std::list(Dossier) dossiers,
+		std::string nom;
+		std::string adresse;
+		std::list(Medecin) medecins;
+		std::list(Dossier) dossiers,
 	public: // Méthodes
 	// Constructeur
-	  Cabinet(std::string,std::string);	
+		Cabinet(std::string,std::string);	
 	// Accesseurs
 		std::string getNomCabinet(){};
 		void setNewNomCabinet(std::string){};
