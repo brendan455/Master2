@@ -1,42 +1,41 @@
 // Auteur : DENIAUD B. - AIRAULT D.
 
+#ifndef MEDECIN_H
+#define MEDECIN_H
 #pragma once
 #include <iostream>
 #include <string>
 #include <fstream>
-using namespace std;
 
 class Medecin
 {
 	private: // Attribut
-		int ID;
-		string nom;
-		string prenom;
+		std::string nom;
+		std::string prenom;
 		int numeroOrdreMedecin;
-		string specialite;
+		std::string specialite;
 
 	public: // Méthodes
 		// Constructeur
-		Medecin(string);
+		Medecin(std::string,std::string,int,std::string);
 		
 		// Accesseurs
-		int getIDMedecin();
-		void setIDMedecin(int);
+		std::string getnomMedecin();
+		void setnomMedecin(std::string);
 
-		string getnomMedecin();
-		void setnomMedecin(string);
-
-		string getprenomMedecin();
-		void setprenomMedecin(string);
+		std::string getprenomMedecin();
+		void setprenomMedecin(std::string);
 		
 		int getnumeroOrdreMedecin();
 		void setnumeroOrdreMedecin(int);
 
-		string getSpecialite();
-		void setSpecialite(string);
+		std::string getSpecialite();
+		void setSpecialite(std::string);
 
 
 		// Affichage
 		void afficherMedecin();
-		void afficherMedecinFichier(string);
+		void afficherMedecinFichier(std::string);
 };
+
+#endif
