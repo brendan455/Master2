@@ -17,7 +17,7 @@ class Medecin
 
 	public: // Méthodes
 		// Constructeur
-		Medecin(std::string,std::string,int,std::string);
+		Medecin(std::string,int);
 		
 		// Accesseurs
 		std::string getnomMedecin();
