@@ -19,7 +19,7 @@ class Prescription
 
 	public: // Méthodes
 		// Constructeur
-		Prescription(std::string,Posologie,dateDePrescription);
+		Prescription(std::string,Posologie,Date);
 		
 	
 		// Accesseurs
@@ -27,8 +27,8 @@ class Prescription
 		void getTypePrescription();
 		Posologie setPosologie();
 		void getPosologie();
-		Date setDate();
-		void getDate();
+		Date setDatePrescription();
+		void getDatePrescription();
 	
 		// Affichage
 		void afficherPrescription();
