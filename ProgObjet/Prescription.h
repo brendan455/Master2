@@ -6,6 +6,8 @@
 #include <iostream>
 #include <string.h>
 #include <fstream>
+#include "Posologie.h"
+#include "Date.h"
 
 
 
