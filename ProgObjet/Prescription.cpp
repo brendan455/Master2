@@ -22,25 +22,22 @@ void Prescription::setDatePrescription(Date datePrescription){
 	this->dateDePrescription = datePrescription;
 };
 
-std::string getTypePrescription(){
+string Prescription::getTypePrescription(){
 	return this->typeDePrescripiton;
 };
 
-void setTypePrescription(string typePrescription){
+void Prescription::setTypePrescription(string typePrescription){
 	this->typeDePrescripiton = typePrescription;
 };
-Posologie getPosologie(){
+Posologie Prescription::getPosologie(){
 	return this->posologie;
 };
-void setPosologie(Posologie posologie){
+void Prescription::setPosologie(Posologie posologie){
 	this->posologie = posologie;
 };
 
-
-
-// Affichage d'un objet de type DossierPatient
-void DossierPatient::afficherPrescription(){
-	cout << "Je le ferai après..." << << endl;
-}
+void Prescription::afficherPosologie(){
+	cout << end1 ;
+};
 
 };
