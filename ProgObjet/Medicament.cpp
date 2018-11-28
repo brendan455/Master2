@@ -9,12 +9,12 @@ using namespace std;
 
 
 // Constructeur de Medicament
-Medicament::Medicament(string nom, string laboratoire) : Prescription{
+Medicament::Medicament(string nom, string laboratoire) : Prescription(string typePrescription,Posologie posologie,date dateDePrescription){
 	Medicament::setnomMedicament(nom);
 	Medicament::setlaboratoireMedicament(laboratoire);
-	Medicament::setDatePrescription(Date dateDePrescription);
-	Medicament::setTypePrescription(string typePrescription);
-	Medicament::setPosologie(Posologie posologie);
+	Medicament::setDatePrescription(dateDePrescription);
+	Medicament::setTypePrescription(typePrescription);
+	Medicament::setPosologie(posologie);
 }
 
 // Accesseurs
