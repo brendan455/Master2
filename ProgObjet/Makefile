@@ -1,12 +1,12 @@
 CC=g++
 CFLAGS=-g
 LDFLAGS=
-EXEC=software
+EXEC=GestionCabinet
 
 all: $(EXEC)
 
-software: cabinetMedical.o patient.o medecin.o rdv.o dossierPatient.o prescription.o posologie.o medicament.o
-	$(CC) *.cpp -o software $(LDFLAGS)
+script: main.o CabinetMedical.o DossierPatient.o Patient.o Medecin.o RDV.o Prescription.o Posologie.o Medicament.o
+	$(CC) *.cpp -o GestionCabinet $(LDFLAGS)
 
 clean:
 	rm -rf *.o

@@ -1,33 +1,34 @@
-// DENIAUD Brendan et AIRAULT David
-#ifndef MEDICAMENT_H
-define MEDICAMENT_H
+// Auteur : DENIAUD B. - AIRAULT D.
+
 #pragma once
 #include <iostream>
 #include <string>
 #include <fstream>
+using namespace std;
 
-
-namespace Med
 class Medicament
 {
 	private: // Attribut
-		std::string nom;
-		std::string laboratoire;
+		int ID;
+		string nom;
+		string laboratoire;
 
 	public: // Méthodes
 		// Constructeur
-		Medicament(std::string,std::string);
+		Medicament(string);
 		
 		// Accesseurs
-		std::string getNom();
-		void setNom(std::string);
-		string getLaboratoire();
-		void setLaboratoire(string);
-		
-		// Comportement
+		int getIDMedicament();
+		void setIDMedicament(int);
+
+		string getnomMedicament();
+		void setnomMedicament(string);
+
+		string getlaboratoireMedicament();
+		void setlaboratoireMedicament(string);
+
+
+		// Affichage
 		void afficherMedicament();
+		void afficherMedicamentFichier(string);
 };
-
-#endif
-
-// DENIAUD Brendan et AIRAULT David
