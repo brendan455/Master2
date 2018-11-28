@@ -26,11 +26,11 @@ class Prescription
 	
 		// Accesseurs
 		std::string setTypePrescription();
-		void getTypePrescription();
+		void getTypePrescription(std::string);
 		Posologie setPosologie();
-		void getPosologie();
+		void getPosologie(Posologie);
 		Date setDatePrescription();
-		void getDatePrescription();
+		void getDatePrescription(Date);
 	
 		// Affichage
 		void afficherPrescription();
