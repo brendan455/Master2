@@ -15,15 +15,15 @@ class Posologie
 
 	public: // Méthodes
 		// Constructeur
-		Posologie(int,std::string);
+		Posologie(int,std::string,std::string);
 		
 		// Accesseurs
 		int getNbPrise();
 		void setNbPrise(int);
 		std::string getJSM()
-		void getJSM(std::string)
+		void setJSM(std::string)
 		std::string getTemps()
-		void getTemps(std::string)
+		void setTemps(std::string)
 			
 		// Affichage
 		void afficherPosologie();
