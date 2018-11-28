@@ -11,7 +11,6 @@ private: // Attribut
 
 public: // Méthodes
 	// Constructeur
-    Date();
     Date(int month,int day,int year);
 
     // Affichage
