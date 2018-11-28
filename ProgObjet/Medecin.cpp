@@ -6,10 +6,10 @@ using namespace std;
 
 // Constructeur de Medecin
 Medecin::Medecin( string nom, int numeroOrdreMedecin){
-	setnomMedecin(nom);
-	setnumeroOrdreMedecin(numeroOrdreMedecin);
-	setprenomMedecin("inconnu");
-	setSpecialite("inconnue");
+	Medecin::setnomMedecin(nom);
+	Medecin::setnumeroOrdreMedecin(numeroOrdreMedecin);
+	Medecin::setprenomMedecin("inconnu");
+	Medecin::setSpecialite("inconnue");
 }
 
 // Accesseurs
@@ -49,9 +49,9 @@ void Medecin::setSpecialite(string specialite){ // Changer la spécialité d'un 
 
 // Affichage d'un objet de type Medecin
 void Medicament::afficherMedecin(){
-	cout << "	- Le nom du medecin est : " << getnomMedecin() << "Le prénom du medecin est : " 
-		<< getprenomMedecin() << "Le numéro d'ordre du medecin est : " 
-		<< getnumeroOrdreMedecin() << " La spécialité du medecin est : " < getspecialite() << endl;	
+	cout << "	- Le nom du medecin est : " << Medecin::getnomMedecin() << "Le prénom du medecin est : " 
+		<< Medecin::getprenomMedecin() << "Le numéro d'ordre du medecin est : " 
+		<< Medecin::getnumeroOrdreMedecin() << " La spécialité du medecin est : " << Medecin::getspecialite() << endl;	
 }
 
 
