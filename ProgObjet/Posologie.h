@@ -10,8 +10,8 @@ class Posologie
 {
 	private: // Attribut
 		int nombreDePrises;
-		std::string jsm
-		std::string temps
+		std::string jsm;
+		std::string temps;
 
 	public: // Méthodes
 		// Constructeur
