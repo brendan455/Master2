@@ -6,8 +6,9 @@
 #include <iostream>
 #include <string>
 #include <fstream>
+#include "Prescription.h"
 
-class Medicament
+class Medicament : public Prescription
 {
 	private: // Attribut
 		std::string nom;
