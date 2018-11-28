@@ -37,7 +37,7 @@ void Prescription::setPosologie(Posologie posologie){
 };
 
 void Prescription::afficherPosologie(){
-	cout << end1 ;
+	cout << " La posologie de cette prescription est : " << this->posologie << end1 ;
 };
 
 };
