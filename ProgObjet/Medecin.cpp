@@ -1,30 +1,20 @@
 // Auteur : DENIAUD B. - AIRAULT D.
 
-#include "Medecin.h"
-#include <iostream> 
+#include "Medecin.h" 
 using namespace std;
 
 
-// Initialisation du compteur pour la numérotation des objets de type Medecin
-int Medecin::compteur=0;
-
 // Constructeur de Medecin
-Medecin::Medecin(int ID, string nom, string prenom, int numeroOrdreMedecin, string specialite){
-	this->ID=this->compteur; 
-	this->nom=nom;
-	this->prenom=prenom;
-	this->numeroOrdreMedecin=numeroOrdreMedecin;
-	this->specialite=specialite;
-	this->compteur=this->compteur+1;
+Medecin::Medecin( string nom, int numeroOrdreMedecin){
+	setnomMedecin(nom);
+	setnumeroOrdreMedecin(numeroOrdreMedecin);
+	setprenomMedecin("inconnu");
+	setSpecialite("inconnue");
 }
 
 // Accesseurs
 
-string Medecin::getIDMedecin(){ // Récupérer les ID de Medecin
-	return this->ID;
-}
-
-string Medecin::getnomMedecin(){ // Récupérer les noms de Medecin
+string Medecin::getnomMedecin(){ // Récupérer les prénoms de Medecin
 	return this->nom;
 }
 
@@ -40,9 +30,6 @@ string Medecin::getspecialite(){ // Récupérer les specialités de Medecin
 	return this->specialite;
 }
 
-void Medecin::setIDMedecin(int ID){ // Changer l'ID d'un medecin
-	this->ID=ID;
-}
 
 void Medecin::setnomMedecin(string nom){ // Changer un nom de medecin
 	this->nom=nom;
@@ -52,7 +39,7 @@ void Medecin::setprenomMedecin(string prenom){ // Changer un prénom de medecin
 	this->prenom=prenom;
 }
 
-void Medecin::setnnumeroOrdreMedecin(int numeroOrdreMedecin){ // Changer numéro d'ordre de medecin
+void Medecin::setnumeroOrdreMedecin(int numeroOrdreMedecin){ // Changer numéro d'ordre de medecin
 	this->numeroOrdreMedecin=numeroOrdreMedecin;
 }
 
@@ -62,10 +49,13 @@ void Medecin::setSpecialite(string specialite){ // Changer la spécialité d'un 
 
 // Affichage d'un objet de type Medecin
 void Medicament::afficherMedecin(){
-	cout << "	- L'ID du medecin est : "<< this->ID <<" Le nom du medecin est : " << this->nom_medecin << "Le prénom du medecin est : " << this->prenom_medecin << "Le numéro d'ordre du medecin est : " << this->numeroOrdreMedecin << " La spécialité du medecin est : " < this->specialite << endl;	
+	cout << "	- Le nom du medecin est : " << getnomMedecin() << "Le prénom du medecin est : " 
+		<< getprenomMedecin() << "Le numéro d'ordre du medecin est : " 
+		<< getnumeroOrdreMedecin() << " La spécialité du medecin est : " < getspecialite() << endl;	
 }
 
 
+// A faire plus tard.
 // Enregistrer un objet de type Medecin dans un fichier
 void Medecin::afficherMedecinFichier(string nomFichier){
 	ofstream outputFile(nomFichier.c_str(), ios::app); // Ouvrir le fichier
