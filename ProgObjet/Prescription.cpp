@@ -8,9 +8,9 @@ using namespace std;
 
 // Code du contructeur d'une prescription
 Prescription::Prescription(string typePrescription,Posologie posologie,date dateDePrescription){
-	Prescription::setDatePrescription(Date dateDePrescription);
-	Prescription::setTypePrescription(string typePrescription);
-	Prescription::setPosologie(Posologie posologie);
+	Prescription::setDatePrescription(dateDePrescription);
+	Prescription::setTypePrescription(typePrescription);
+	Prescription::setPosologie(posologie);
 }
 
 // Obtenir la date de Prescription
