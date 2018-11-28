@@ -1,49 +1,40 @@
 // Auteur : DENIAUD B. - AIRAULT D.
 
+#ifndef PRESCRIPTION_H
+#define PRESCRIPTION_H
 #pragma once
 #include <iostream>
-#include <vector>
-#include <string>
 #include <string.h>
 #include <fstream>
-#include "Patient.h"
-#include "Medecin.h"
-#include "Posologie.h"
-using namespace std;
 
 
 
 class Prescription
 {
 	private: // Attributs
-		int ID;
-		string typeDePrescription;
-		vector<Patient> nom_patient;
-		vector<Posologie> dateDebut;
-		vector<Posologie> dateFin;
-		vector<Medecin> nom_medecin;
-		vector<Posologie> nombrePrisesJour;
+		std::string typeDePrescripiton
+		Posologie posologie
+		Date dateDePrescription
 
 
 	public: // Méthodes
 		// Constructeur
-		Prescription(int,string);
+		Prescription(std::string,Posologie,dateDePrescription);
 		
+	
+		// Accesseurs
+		std::string setTypePrescription();
+		void getTypePrescription();
+		Posologie setPosologie();
+		void getPosologie();
+		Date setDate();
+		void getDate();
+	
 		// Affichage
 		void afficherPrescription();
 		
-		// Accesseurs
-		int getIDPrescription();
-		int TrouverPrescription();
-		vector<Patient> getnomPatientPrescription();
-		vector<Medecin> getnomMedecinPrescription();
-		vector<Posologie> getdateDebutPrescription();
-		vector<Posologie> getdateFinPrescription();
-		vector<Posologie> getPosologiePrescription();
-		void setIDPrescription(int);
-		void setnomPatientPrescription(string);
-		void setnomMedecinPrescription(string);
-		void setdateDebutPrescription(int);
-		void setIDPrescription(int);
-		void setnombrePrisesJourPrescription(int);
+		
+		
 };
+
+#endif
