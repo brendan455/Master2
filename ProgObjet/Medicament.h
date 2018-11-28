@@ -1,30 +1,34 @@
 // Auteur : DENIAUD B. - AIRAULT D.
 
+#ifndef MEDICAMENT_H
+#define MEDICAMENT_H
 #pragma once
 #include <iostream>
 #include <string>
 #include <fstream>
-using namespace std;
 
 class Medicament
 {
 	private: // Attribut
 		int ID;
-		string nom;
-		string laboratoire;
-
+		std::string nom;
+		std::string laboratoire;
+		
+	
+	
+		void setIDMedicament(int);
+	
 	public: // Méthodes
 		// Constructeur
-		Medicament(string);
+		Medicament(std::string);
 		
 		// Accesseurs
 		int getIDMedicament();
-		void setIDMedicament(int);
 
-		string getnomMedicament();
+		std::string getnomMedicament();
 		void setnomMedicament(string);
 
-		string getlaboratoireMedicament();
+		std::string getlaboratoireMedicament();
 		void setlaboratoireMedicament(string);
 
 
@@ -32,3 +36,5 @@ class Medicament
 		void afficherMedicament();
 		void afficherMedicamentFichier(string);
 };
+
+#endif
