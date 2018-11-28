@@ -20,10 +20,10 @@ class Posologie
 		// Accesseurs
 		int getNbPrise();
 		void setNbPrise(int);
-		std::string getJSM()
-		void setJSM(std::string)
-		std::string getTemps()
-		void setTemps(std::string)
+		std::string getJSM();
+		void setJSM(std::string);
+		std::string getTemps();
+		void setTemps(std::string);
 			
 		// Affichage
 		void afficherPosologie();
