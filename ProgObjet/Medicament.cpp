@@ -10,8 +10,8 @@ using namespace std;
 
 // Constructeur de Medicament
 Medicament::Medicament(string nom, string laboratoire){
-	this->nom=nom;
-	this->laboratoire=laboratoire;
+	Medicament::setnomMedicament(nom);
+	edicament::setlaboratoireMedicament(laboratoire);
 }
 
 // Accesseurs
