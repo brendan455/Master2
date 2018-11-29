@@ -2,68 +2,81 @@
 
 #include "Date.h" 
 #include <iostream>
-#include <cassert> 
+#include <string>
 
 using namespace std;
 
-// Code du contructeur de Date
-Date::Date()
-{
-    month = 1; // Valeur défaut
-    day = 1; // Valeur défaut
-    year = 2000; // Valeur défaut
-}
 
               
-Date::Date(int Month,int Day,int Year)
+Date::Date(int month,int day,int year)
 {
-    if((Month < 1||Month > 12)||(Day < 1||Day > 31)||(Year < 1900||Year > 2020))
-    {
-        std::cout<<"Invalid"<<std::endl;
-
-    }
-    else
-    {
-        month = Month;
-        day = Day;
-        year = Year;
-    }
-}
-
-
-void Date::increment()
-{
-    day += 1;
-    assert(day >= 1 && day <= 31);
-    if(month == 2 && day == 28 || day == 29)
-    {
-      if(year % 4 || year % 400)
-       {
-	 std::cout<<"Thats a Leap Year"<<std::endl;
-	 // Mois += 1;
-	 day += 1 ;
-	 // Année ++;
-	 assert(day >= 1 && day <= 31);
-	 assert(month >= 1 && month <= 12);
-       }
-     }
+	while(year < 1900 || year > 2100){
+		cout<< "Année Invalide, veuillez saisir une année comprise entre 1900 et 2100"<< end1;
+		cin >> year
+	}
+    	while(month < 1||month > 12)
+    	{
+		cout<<"Mois Invalide, veuillez saisir un mois compris entre 1 et 12"<< endl;
+		cin >> month
+    	}
+    	if (month = 1 || month = 3 || month = 5 || month = 7 || month = 8 || month = 10 || month = 12 ){
+		while (day < 1 || day > 31){
+			cout<<"Jour Invalide, veuillez saisir un jour compris entre 1 et 31"<< endl;
+			cin >> day
+		}
+	}else{
+		if (month !=2){
+			while (day < 1 || day > 30){
+				cout<<"Jour Invalide, veuillez saisir un jour compris entre 1 et 30"<< endl;
+				cin >> day
+			}
+		}else{
+			if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0){
+				while (day < 1 || day > 29){
+					cout<<"Jour Invalide, veuillez saisir un jour compris entre 1 et 29"<< endl;
+					cin >> day
+				}
+			}else{
+				while (day < 1 || day > 28){
+					cout<<"Jour Invalide, veuillez saisir un jour compris entre 1 et 28"<< endl;
+					cin >> day
+				}
+		}
+	}	
+        Date::setMonth(month);
+        Date::setDay(day);
+        Date::setYear(year);
     
 }
 
-// Affichage d'un élément de type Debut
-void Date::Debut()
+//Accesseur
+void Date::setDay(int day){
+	this->day=day;
+};
+int Date::getDay(){
+	return this->day;
+};
+void Date::setMonth(int month){
+	this->month=month;
+};
+int Date::getMonth(){
+	return this->month;
+};
+void Date::setYear(int year){
+	this->year=year;
+};
+int Date::getYear(){
+	return this->year;
+};
+
+ 
+void Date::affichage1()
 {
-    std::cout<<day<<'/'<<month<<'/'<<year<<std::endl;
+    cout << day <<'/'<< month << '/' << year << endl;
 }
 
-// Affichage d'un élément de type Fin
-void Date::Fin()
-{
-    std::cout<<day<<'/'<<month<<'/'<<year<<std::endl;
-}
-
-// Affichage d'un date au format XX/MOIS/XXXX
-void Date::display2()
+	
+void Date::affichage2()
 {
     string Month;
     switch(month)
@@ -117,5 +130,63 @@ void Date::display2()
             break;
     }
 
-    std::cout<<Month<<'/'<<day<<'/'<<year<<std::endl;
+    cout<< day <<'/'<< Month << '/' << year << endl;
+}
+
+// Affichage d'un date au format XX/MOIS/XXXX
+void Date::affichage3()
+{
+    string Month;
+    switch(month)
+    {
+        case 1:
+            Month="January";
+            break;
+
+        case 2:
+            Month="February";
+            break;
+
+        case 3:
+            Month="March";
+            break;
+
+        case 4:
+            Month="April";
+            break;
+
+        case 5:
+            Month="May";
+            break;
+
+        case 6:
+            Month="June";
+            break;
+
+        case 7:
+            Month="July";
+            break;
+
+        case 8:
+            Month="August";
+            break;
+
+        case 9:
+            Month="September";
+            break;
+
+        case 10:
+            Month="October";
+            break;
+
+        case 11:
+            Month="November";
+            break;
+
+        case 12:
+            Month="December";
+            break;
+    }
+
+    cout << Month << '/' << day << '/' << year << sendl;
 }
