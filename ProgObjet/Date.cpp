@@ -69,13 +69,13 @@ int Date::getYear(){
 	return this->year;
 };
 
- 
+// Affichage d'une date au format XX/XX/XXXX
 void Date::affichage1()
 {
     cout << day <<'/'<< month << '/' << year << endl;
 }
 
-	
+// Affichage d'une date au format XX/MOIS/XXXX
 void Date::affichage2()
 {
     string Month;
@@ -133,7 +133,7 @@ void Date::affichage2()
     cout<< day <<'/'<< Month << '/' << year << endl;
 }
 
-// Affichage d'un date au format XX/MOIS/XXXX
+// Affichage d'une date au format MOIS/XX/XXXX
 void Date::affichage3()
 {
     string Month;
