@@ -9,7 +9,7 @@ using namespace std;
 
 // Contructeur de DossierPatient
 DossierPatient::DossierPatient(int numeroDossier,list<RDV> rendezVous,Patient patient){
-	setNumeroDossier(numeroDossier);
+	setNumeroDossier(numeroDossier)
 	setPatient(patient);
 	setRendezVous(rendezVous);
 };
