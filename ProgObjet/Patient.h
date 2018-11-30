@@ -12,6 +12,7 @@ class Patient
 		std::string prenom;
 		int numeroSecuriteSociale;
 		bool sexe;
+		std::string civilite
 
 	public: // Méthodes
 		// Constructeur
@@ -29,6 +30,9 @@ class Patient
 	
 		bool getSexe();
 		void setSexe(bool);
+	
+		std::string getCivilite();
+		void setCivilite(std::string);
 
 		// Affichage
 		void afficherPatient();
