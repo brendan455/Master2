@@ -11,7 +11,7 @@
 class DossierPatient
 {
 	private: // Attributs
-		int NumeroDossier;
+		int numeroDossier;
 		list<RDV> RendezVous;
 		Patient patient;
 
