@@ -20,7 +20,7 @@ void RDV::setMedecin(Medecin medecin){
 Medecin RDV::getMedecin(){
 	return this->medecin;
 };
-void RDV::setPrescriptions(std::list<Prescription> prescriptions) '
+void RDV::setPrescriptions(std::list<Prescription> prescriptions){
 	this->prescriptions=prescriptions;
 };
 list<Prescription> RDV::getPrescriptions(){
