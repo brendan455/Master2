@@ -4,28 +4,31 @@
 #include <iostream>
 #include <string>
 #include <fstream>
-using namespace std;
 
-class Gene
+class Patient
 {
 	private: // Attribut
-		string nom;
-		string prenom;
+		std::string nom;
+		std::string prenom;
 		int numeroSecuriteSociale;
+		bool sexe;
 
 	public: // Méthodes
 		// Constructeur
-		Patient(string);
+		Patient(std::string,std::string,int,bool);
 		
 		// Accesseurs
-		string getnomPatient();
-		void setnomPatient(string);
+		std::string getNomPatient();
+		void setNomPatient(std::string);
 
-		string getprenomPatient();
-		void setprenomPatient(string);
+		std::string getPrenomPatient();
+		void setPrenomPatient(std::string);
 		
-		int getnumeroSecuriteSociale();
-		void setnumeroSecuriteSociale(int);
+		int getNumeroSecuriteSociale();
+		void setNumeroSecuriteSociale(int);
+	
+		bool getSexe();
+		void setSexe(bool);
 
 		// Affichage
 		void afficherPatient();
