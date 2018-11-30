@@ -2,21 +2,17 @@
 
 #pragma once
 #include <iostream>
-#include <vector>
+#include <list>
 #include <string>
-#include <string.h>
 #include <fstream>
 #include "Patient.h"
-using namespace std;
-
-
 
 class DossierPatient
 {
 	private: // Attributs
 		int ID;
 		Type type;
-		vector<Patient> listofpatients;
+		Patient listofpatients;
 
 
 	public: // Méthodes
