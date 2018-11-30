@@ -2,39 +2,33 @@
 
 #pragma once
 #include <iostream>
-#include <vector>
 #include <string>
-#include <string.h>
+#include <list>
 #include <fstream>
-#include "Patient.h"
+#include "Prescription.h"
 #include "Medecin.h"
 #include "Date.h"
 using namespace std;
 
-
-
 class RDV
 {
 	private: // Attributs
-		vector<Medecin> listofmedecins;
-		vector<Patient> listofpatients;
-		vector<Date> dateRDV;
+		Medecin medecin
+		List(Prescription) prescriptions
+		Date dateRdv
 
 
 	public: // Méthodes
-		
-		// Affichage
-		void afficherRDVPatient(string);
-		void afficherRDVMedecin(string);
-		void afficherRDVDate(int);
+		RDV(Medecin,List(Prescription),Date);
 		
 		// Accesseurs
-		vector<Patient> getNomPatient();
-		vector<Medecin> getNomMedecin();
-		vector<Date> getDate();
-
-		void setRDVPatient(vector<Patient>);
-		void setRDVMedecin(vector<Medecin>);
-		void setRDVDate(vector<Date>);
-
+		void setMedecin(Medecin):
+		Medecin getMedecin();
+		void setPrescriptions(List(Prescription));
+		List(Prescription) getPrescriptions();
+		void setDateRdv(Date);
+		Date getDateRdv();
+	
+		// Affichage
+		void afficherBilanRdv();
 };
