@@ -32,5 +32,4 @@ class Patient
 
 		// Affichage
 		void afficherPatient();
-		void afficherPatientFichier(string);
 };
