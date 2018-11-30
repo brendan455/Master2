@@ -6,27 +6,28 @@
 #include <string>
 #include <fstream>
 #include "Patient.h"
+#include "RDV.h"
 
 class DossierPatient
 {
 	private: // Attributs
-		int ID;
-		Type type;
-		Patient listofpatients;
-
+		int NumeroDossier;
+		list<RDV> RendezVous;
+		Patient patient;
 
 	public: // Méthodes
 		// Constructeur
-		DossierPatient(int,string);
-		
-		// Affichage
-		void afficherDossierPatient();
-		void afficherSelonnomPatient(string);
+		DossierPatient(int,list<RDV>,Patient);
 		
 		// Accesseurs
-		int getID();
-		int TrouverDossier();
-		void setDossierPatient(vector<Patient>);
-		void setIDDossierPatient(int);
-		vector<Patient> getNomPatientDossierPatient();
+		int getNumeroDossier();
+		void setNumeroDossier(int);
+		Patient getPatient();
+		void setPatient(Patient);
+		list<RDV> getRendezVous();
+		void setRendezVous(list<RDV>);
+	
+		// Affichage
+		void afficherDossierPatient();
+		
 };
