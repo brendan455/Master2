@@ -8,7 +8,6 @@
 #include "Prescription.h"
 #include "Medecin.h"
 #include "Date.h"
-using namespace std;
 
 class RDV
 {
