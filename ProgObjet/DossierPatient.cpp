@@ -42,8 +42,8 @@ void afficherDossierPatient(){
 	
 	cout << "Dossier de " << DossierPatient::getPatient().getCivilite() << DossierPatient::getPatient().getNomPatient() << end1 ;
 	
-	for (i=rendezVous.begin(); i!=rendezVous.end(); ++i){
-   		cout << *i.afficherBilanRdv <<end1;
+	for (i=DossierPatient::getRendezVous().begin(); i!=DossierPatient::getRendezVous().end(); ++i){
+   		cout << *i.afficherBilanRdv() <<end1;
 		cout << "Voulez vous voir le Rendez-vous suivant ?" << "yes / no " << end1
 			
 		while (avis.compare("yes") != 0 && avis.compare("no") != 0){
@@ -54,6 +54,6 @@ void afficherDossierPatient(){
 		}
 	}
 	if (avis.compare("yes") == 0){
-		cout << "tout les rendez vous on été vues" << end1
+		cout << "tout les rendez-vous on été vus" << end1
 	}
 };
