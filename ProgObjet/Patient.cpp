@@ -5,54 +5,56 @@
 using namespace std;
 
 
-// Initialisation du compteur pour la numérotation des objets de type Patient
-int Patient::compteur=0;
-
 // Constructeur de Patient
-Patient::Patient(string nom, string prenom, int numeroSecuriteSociale){
-	this->ID=this->compteur; 
-	this->nom=nom;
-	this->prenom=prenom;
-	this->numeroSecuriteSociale=numeroSecuriteSociale;
-	this->compteur=this->compteur+1;
-}
+Patient::Patient(string nom, string prenom, int numeroSecuriteSociale, bool sexe){
+	Patient::setNomPatient(nom);
+	Patient::setPrenomPatient(prenom);
+	Patient::setNumeroSecuriteSociale(numeroSecuriteSociale);
+	Patient::setSexe(sexe);
+};
 
 // Accesseurs
-string Patient::getnomPatient(){ // Récupérer les noms de l'objet Patient
+string Patient::getNomPatient(){ // Récupérer les noms de l'objet Patient
 	return this->nom;
-}
+};
 
-string Patient::getprenomPatient(){ // Récupérer les prénoms de l'objet Patient
+string Patient::getPrenomPatient(){ // Récupérer les prénoms de l'objet Patient
 	return this->prenom;
-}
+};
 
-int Patient::getnumeroSecuriteSociale(){ // Récupérer les numéros de sécurité sociale d'un objet Patient
+int Patient::getNumeroSecuriteSociale(){ // Récupérer les numéros de sécurité sociale d'un objet Patient
 	return this->numeroSecuriteSociale;
-}
+};
+bool Patient::getSexe(){
+	return this->sexe;
+};
+void Patient::setSexe(bool sexe){
+	thise->sexe=sexe;
+};
 
-void Patient::setnomPatient(string nom){ // Changer un nom d'un objet Patient
+void Patient::setNomPatient(string nom){ // Changer un nom d'un objet Patient
 	this->nom=nom;
-}
+};
 
-void Patient::setprenomPatient(string prenom){ // Changer un prénom d'un objet Patient
+void Patient::setPrenomPatient(string prenom){ // Changer un prénom d'un objet Patient
 	this->prenom=prenom;
-}
+};
 
-void Patient::setnnumeroSecuriteSociale(int numeroSecuriteSociale){ // Changer un numéro de sécurité sociale d'un objet Patient
+void Patient::setNumeroSecuriteSociale(int numeroSecuriteSociale){ // Changer un numéro de sécurité sociale d'un objet Patient
 	this->numeroSecuriteSociale=numeroSecuriteSociale;
-}
+};
 
 // Affichage d'un objet de type Patient
 void Medicament::afficherPatient(){
-	cout << "	- L'ID du patient est : "<< this->ID <<" Le nom du patient est : " << this->nom_patient << "Le prénom du patient est : " << this->prenom_patient << "Le numéro de sécurité sociale du patient est : " << this->numeroSecuriteSociale << endl;	
-}
-
-
-// Enregistrer un objet de type Patient dans un fichier
-void Patient::afficherPatientFichier(string nomFichier){
-	ofstream outputFile(nomFichier.c_str(), ios::app); // Ouvrir le fichier
-	if(outputFile){ // Si l'ouverture a fonctionnée, écrire à la suite le nom du patient
-		outputFile << "		* Le patient est : " << this->nom << endl;
-		outputFile.close(); // Fermer le fichier
+	string sexe;
+	string civil;
+	if (Patient::getSexe()) {
+		sexe = "une femme";
+		civil = "Madame";
 	}
+	else {
+		sexe = "un homme";
+		civil = "Monsieur";
+	}
+	cout << "	-  Le patient est " << sexe << "," << civil << Patient::getNomPatient() << Patient::getPrenomPatient() << "." << "Son numéro de sécurité sociale du patient est le " << Patient::getNumeroSecuriteSociale() << endl;	
 }
