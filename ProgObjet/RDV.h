@@ -14,18 +14,18 @@ class RDV
 {
 	private: // Attributs
 		Medecin medecin
-		std::list(Prescription) prescriptions
+		std::list<Prescription> prescriptions
 		Date dateRdv
 
 
 	public: // Méthodes
-		RDV(Medecin,std::list(Prescription),Date);
+		RDV(Medecin,std::list<Prescription>,Date);
 		
 		// Accesseurs
 		void setMedecin(Medecin):
 		Medecin getMedecin();
-		void setPrescriptions(std::list(Prescription));
-		std::list(Prescription) getPrescriptions();
+		void setPrescriptions(std::list<Prescription>);
+		std::list<Prescription> getPrescriptions();
 		void setDateRdv(Date);
 		Date getDateRdv();
 	
