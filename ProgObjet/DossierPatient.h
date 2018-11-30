@@ -12,7 +12,7 @@ class DossierPatient
 {
 	private: // Attributs
 		int numeroDossier;
-		list<RDV> RendezVous;
+		list<RDV> rendezVous;
 		Patient patient;
 
 	public: // Méthodes
