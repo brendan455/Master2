@@ -30,7 +30,7 @@ void RDV::setDateRdv(Date date){
 	this->date=date;
 };
 Date RDV::getDateRdv(){
-	this->date
+	return this->date;
 };
 	
 // Affichage
