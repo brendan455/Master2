@@ -11,23 +11,22 @@
 class DossierPatient
 {
 	private: // Attributs
-		int numeroDossier;
-		list<RDV> rendezVous;
+		list<RDV> rdvs;
 		Patient patient;
+
 
 	public: // Méthodes
 		// Constructeur
-		DossierPatient(int,list<RDV>,Patient);
+		DossierPatient();
+		DossierPatient(Patient);
+		DossierPatient(list<RDV>,Patient);
 		
-		// Accesseurs
-		int getNumeroDossier();
-		void setNumeroDossier(int);
-		Patient getPatient();
-		void setPatient(Patient);
-		list<RDV> getRendezVous();
-		void setRendezVous(list<RDV>);
-	
 		// Affichage
 		void afficherDossierPatient();
 		
+		// Accesseurs
+		void setPatient(Patient);
+		Patient getPatient();
+		void setRdvs(list<RDV>);
+		list<RDV> getRdvs();
 };

@@ -11,6 +11,12 @@ Patient::Patient(string nom, string prenom, int numeroSecuriteSociale, bool sexe
 	Patient::setPrenomPatient(prenom);
 	Patient::setNumeroSecuriteSociale(numeroSecuriteSociale);
 	Patient::setSexe(sexe);
+	if getSexe(){
+		Patient::setCivilite("Monsieur");
+	}
+	else {
+		Patient::setCivilite("Madame");
+	}
 };
 
 // Accesseurs
@@ -28,8 +34,12 @@ int Patient::getNumeroSecuriteSociale(){ // Récupérer les numéros de sécurit
 bool Patient::getSexe(){
 	return this->sexe;
 };
+string Patient::getCivilite(){
+	return this->civilite;
+};
+
 void Patient::setSexe(bool sexe){
-	thise->sexe=sexe;
+	this->sexe=sexe;
 };
 
 void Patient::setNomPatient(string nom){ // Changer un nom d'un objet Patient
@@ -44,17 +54,19 @@ void Patient::setNumeroSecuriteSociale(int numeroSecuriteSociale){ // Changer un
 	this->numeroSecuriteSociale=numeroSecuriteSociale;
 };
 
+void Patient::setCivilite(string civilite){
+	this->civilite=civilite;
+};
+
 // Affichage d'un objet de type Patient
 void Medicament::afficherPatient(){
 	string sexe;
-	string civil;
+
 	if (Patient::getSexe()) {
 		sexe = "une femme";
-		civil = "Madame";
 	}
 	else {
 		sexe = "un homme";
-		civil = "Monsieur";
 	}
-	cout << "	-  Le patient est " << sexe << "," << civil << Patient::getNomPatient() << Patient::getPrenomPatient() << "." << "Son numéro de sécurité sociale du patient est le " << Patient::getNumeroSecuriteSociale() << endl;	
+	cout << "	-  Le patient est " << sexe << "," << Patient::getCivilite() << Patient::getNomPatient() << Patient::getPrenomPatient() << "." << "Son numéro de sécurité sociale du patient est le " << Patient::getNumeroSecuriteSociale() << endl;	
 }
