@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf version="1.2" xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/2001/XMLSchema-instance">
+  <graph defaultedgetype="undirected" mode="static" name="">
+    <meta>
+      <creator>NetworkX 2.2</creator>
+      <lastmodified>03/10/2018</lastmodified>
+    </meta>
+    <nodes>
+      <node id="Gene_8" label="Gene_8" />
+      <node id="O. schmackeri rhodopsin gene, partial cds" label="O. schmackeri rhodopsin gene, partial cds" />
+      <node id="Gene_1" label="Gene_1" />
+      <node id="B. thermophilus Hap_79 lysosyme gene" label="B. thermophilus Hap_79 lysosyme gene" />
+      <node id="Gene_5" label="Gene_5" />
+      <node id="Gene_3" label="Gene_3" />
+      <node id="Gene_2" label="Gene_2" />
+      <node id="Gene_7" label="Gene_7" />
+      <node id="Gene_6" label="Gene_6" />
+      <node id="B. thermophilus Hap_78 lysosyme gene" label="B. thermophilus Hap_78 lysosyme gene" />
+      <node id="Gene_4" label="Gene_4" />
+    </nodes>
+    <edges>
+      <edge id="0" source="Gene_8" target="B. thermophilus Hap_79 lysosyme gene" />
+      <edge id="1" source="Gene_8" target="B. thermophilus Hap_78 lysosyme gene" />
+      <edge id="2" source="Gene_8" target="O. schmackeri rhodopsin gene, partial cds" />
+      <edge id="3" source="O. schmackeri rhodopsin gene, partial cds" target="B. thermophilus Hap_79 lysosyme gene" />
+      <edge id="4" source="O. schmackeri rhodopsin gene, partial cds" target="B. thermophilus Hap_78 lysosyme gene" />
+      <edge id="5" source="O. schmackeri rhodopsin gene, partial cds" target="Gene_4" />
+      <edge id="6" source="O. schmackeri rhodopsin gene, partial cds" target="Gene_1" />
+      <edge id="7" source="Gene_1" target="Gene_6" />
+      <edge id="8" source="Gene_1" target="Gene_4" />
+      <edge id="9" source="B. thermophilus Hap_79 lysosyme gene" target="B. thermophilus Hap_78 lysosyme gene" />
+      <edge id="10" source="Gene_3" target="Gene_4" />
+      <edge id="11" source="Gene_2" target="Gene_4" />
+      <edge id="12" source="Gene_7" target="Gene_6" />
+      <edge id="13" source="Gene_7" target="Gene_4" />
+      <edge id="14" source="Gene_6" target="Gene_4" />
+    </edges>
+  </graph>
+</gexf>
