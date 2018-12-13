@@ -11,8 +11,7 @@ import os,sys,re
 
 
 #Saisir le chemin d'accès au repertoire contenant les séquences dans la variable repertory.
-repertory='/comptes/E117951H/Desktop/Master 2/Python/Projet_python
-'
+repertory='repertory'
 
 
 print(" ______________________________________________________________________________")
