@@ -1,0 +1,6 @@
+ProjetPython
+python==2.7
+numpy==1.15.1
+biopython==1.72
+networkx==2.2
+matplotlib==2.2.3
