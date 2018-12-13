@@ -4,7 +4,7 @@
 #define MEDECIN_H
 #pragma once
 #include "Personne.h"
-class Medecin
+class Medecin : public Personne
 {
 	private: // Attribut
 		int numeroOrdreMedecin;
@@ -13,10 +13,10 @@ class Medecin
 	public: // Méthodes
 		// Constructeur
 		Medecin();
-		Medecin(std::string,int) : Personne(std::string, std::string , std::setnomMedecin, bool, int);
+		Medecin(string specialite, int numeroOrdreMedecin, string nom, string prenom, string adresse, bool sexe, int num) : Personne(nom, prenom, adresse, sexe, num) {};
 		
-		// Accesseurs
 
+		// Accesseurs
 		int getnumeroOrdreMedecin();
 		void setnumeroOrdreMedecin(int);
 

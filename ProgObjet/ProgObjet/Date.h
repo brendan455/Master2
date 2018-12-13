@@ -26,9 +26,9 @@ public: // Méthodes
 	// Affichage d'un date au format XX/XX/XXXX
     void affichage1();
 	// Affichage d'un date au format XX/MOIS/XXXX
-	void affichage2();
+	void affichage2(int mois);
 	// Affichage d'un date au format MOIS/XX/XXXX
-	void affichage3();
+	void affichage3(int mois);
 	
 };
 #endif 

@@ -1,4 +1,4 @@
-Auteur: DENIAUD B. - AIRAULT D.
+//Auteur: DENIAUD B. - AIRAULT D.
 
 #include "Personne.h"
 
@@ -6,7 +6,7 @@ using namespace std;
 
 //Constructeur
 Personne::Personne() {};
-Personne::Personne(string nom, string prenom, string adresse, bool sexe ,int num) {
+Personne::Personne(string nom, string prenom, string adresse, bool sexe , int num) {
 	Personne::setNom(nom);
 	Personne::setPrenom(prenom);
 	Personne::setAdresse(adresse);
@@ -14,6 +14,7 @@ Personne::Personne(string nom, string prenom, string adresse, bool sexe ,int num
 	Personne::setNumeroDeTelephone(num);
 
 };
+
 //Accesseurs
 string Personne::getNom() {
 	return this->nom;
@@ -30,7 +31,6 @@ bool Personne::getSexe() {
 int Personne::getNumeroDeTelephone() {
 	return this->numeroDeTelephone;
 };
-
 void Personne::setNumeroDeTelephone(int num) {
 	this->numeroDeTelephone = num;
 };

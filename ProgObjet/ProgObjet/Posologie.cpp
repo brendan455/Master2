@@ -37,7 +37,7 @@ void Posologie::setTemps(string temps){
 	this->temps=temps;
 };
 
-// Affichage d'un objet de type Medicament
+// Affichage d'un objet de type Posologie
 void Posologie::afficherPosologie(){
 	cout << "La posologie est : " << getNbPrise() << " par " << getJSM() << " pendant" << getTemps() << endl;
 }

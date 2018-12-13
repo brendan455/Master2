@@ -1,8 +1,12 @@
 // Auteur : DENIAUD B. - AIRAULT D.
 
+
+
+
 #include "CabinetMedical.h"
 #include <iostream> 
 #include <string>
+
 using namespace std;
 
 CabinetMedical::CabinetMedical() {}
