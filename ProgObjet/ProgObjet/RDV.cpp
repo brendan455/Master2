@@ -16,6 +16,13 @@ RDV::RDV(Medecin medecin, list<Prescription> prescriptions, Date date)
 	RDV::setDateRdv(date);
 };
 
+RDV::RDV(Medecin medecin, Date date) {
+	list<Prescription> prescriptions;
+	RDV::setMedecin(medecin);
+	RDV::setPrescriptions(prescriptions);
+	RDV::setDateRdv(date);
+};
+
 
 // Accesseurs
 void RDV::setMedecin(Medecin medecin){

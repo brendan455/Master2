@@ -6,8 +6,6 @@
 using namespace std;
 
 
-
-
 Medicament::Medicament() {};
 
 // Constructeur de Medicament
@@ -16,9 +14,8 @@ Medicament::Medicament(string nom, string laboratoire){
 	Medicament::setlaboratoireMedicament(laboratoire);
 }
 
+
 // Accesseurs
-
-
 string Medicament::getnomMedicament(){ // Récupérer les noms de Medicament
 	return this->nom;
 };

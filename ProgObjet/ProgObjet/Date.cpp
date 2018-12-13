@@ -80,10 +80,10 @@ void Date::affichage1()
 
 // Affichage d'une date au format XX/MOIS/XXXX
 
-void Date::affichage2()
+void Date::affichage2(int mois)
 {
     string month;
-    switch(month)
+    switch(mois)
     {
         case 1:
 			month ="January";
@@ -134,11 +134,11 @@ void Date::affichage2()
             break;
     }
 
-	cout << day << '/' << Month << '/' << year;
+	cout << day << '/' << month << '/' << year;
 }
 
 // Affichage d'une date au format MOIS/XX/XXXX
-void Date::affichage3()
+void Date::affichage3(int month)
 {
     string Month;
     switch(month)
@@ -192,5 +192,5 @@ void Date::affichage3()
             break;
     }
 
-    cout << Month << '/' << day << '/' << year << sendl;
+    cout << Month << '/' << day << '/' << year << endl;
 }
