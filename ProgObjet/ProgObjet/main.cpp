@@ -44,27 +44,44 @@ void run() {
 				switch (menuChoice) {
 
 				case(1):
-
+					cout << "Enregistrement patient" << endl;
 					nouveauDossier = enregisterNouveauPatient();
-					if (true) {
+					if (nouveauDossier.exist()) {
 						cabinet.getDossiersPatient().push_back(nouveauDossier);
 					}
 					else {
 						cout << " Erreur de Saisie du patient." << endl;
 					}
 					break;
-
-
-					/*				case(3):
-										cout << " Voulez vous vraiment modifier un patient ? " << endl;
-										getline(cin, reponseString);
-										if (!reponseString.empty()) {
-											reponseString.
-												if (reponseString.compare("yes") || reponseString.compare("y") || reponseString.compare("Y") || reponseString.compare("YES")
-										break;
+				case(2):
+					cout << "Suppression patient" << endl;
+					
+					reponseInt=1;
+					while (!test && reponseInt != 0) {
+						cout << "Saisissez le numero du medecin à supprimer" << endl;
+						cin >> reponseInt;
+						for (list<Medecin>::iterator it = cabinet.getMedecins().begin(); it != cabinet.getMedecins().end(); ++it) {
+							nouveauMedecin = *it;
+							if (nouveauMedecin.getNumeroOrdreMedecin() == (reponseInt)) {
+								test = true;
+								break;
+							}
+						}
+						if (!test) {
+							cout << "numero invalide, veuillez réessayer ou tapez 0 pour retourner au menu." << endl;
+						}
+						else{ 
+							nouveauMedecin
+					/*	case(3):
+						cout << " Voulez vous vraiment modifier un patient ? " << endl;
+						getline(cin, reponseString);
+						if (!reponseString.empty()) {
+						reponseString.
+						if (reponseString.compare("yes") || reponseString.compare("y") || reponseString.compare("Y") || reponseString.compare("YES")
+						break;
 					*/
 				case(4):
-					break;
+					break
 				}
 			}
 			break;
@@ -84,7 +101,7 @@ void run() {
 				switch (menuChoice) {
 				case(1):
 					nouveauMedecin = enregisterNouveauMedecin();
-					if (true) {
+					if (nouveauMedecin.exist()) {
 						cabinet.getMedecins().push_back(nouveauMedecin);
 					}
 					else {
@@ -178,7 +195,7 @@ void run() {
 								cout << "Rendezvous Cree" << endl;
 							}
 							else {
-								cout << "Erreur dans la création du cabinet, veuillez recommencer" << endl;
+								cout << "Erreur dans la création du rendez-vous, veuillez recommencer" << endl;
 							}
 					}
 					break;
@@ -326,7 +343,8 @@ RDV enregistrerNouveauRdv(CabinetMedical cabinet) {
 			dateRDV = Date::Date(jour, mois, annee);
 
 			rendezvous = RDV::RDV(medecinCourant, dateRDV);
-
+		else{
+		rendezvous.setMedecin(Medecin::Medecin());
 		}
 	}
 	return rendezvous;
