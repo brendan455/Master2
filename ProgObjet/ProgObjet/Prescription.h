@@ -6,10 +6,11 @@
 #include <iostream>
 #include <string>
 #include <fstream>
+#include <list>
 #include "Posologie.h"
 #include "Date.h"
 #include "Medicament.h"
-#include "list"
+
 
 
 class Prescription
@@ -18,13 +19,13 @@ class Prescription
 		std::string typeDePrescripiton;
 		Posologie posologie;
 		Date dateDePrescription;
-		list<Medicament> medicaments;
+		std::list<Medicament> medicaments;
 
 
 	public: // Méthodes
 		// Constructeur
 		Prescription();
-		Prescription(std::string,Posologie,Date,list<Medicament>);
+		Prescription(std::string,Posologie,Date, std::list<Medicament>);
 
 	
 		// Accesseurs

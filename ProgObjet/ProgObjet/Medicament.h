@@ -6,7 +6,6 @@
 #include <iostream>
 #include <string>
 #include <fstream>
-#include "Prescription.h"
 
 class Medicament {
 	private: // Attribut

@@ -40,9 +40,6 @@ void CabinetMedical::setAdresseCabinet(std::string adresse)
 	this->adresse = adresse;
 };
 
-void CabinetMedical::setNomCabinet(string adresse) {
-	this->adresse = adresse;
-};
 
 list<DossierPatient> CabinetMedical::getDossiersPatient() {
 	return this->dossiersPatient;

@@ -7,7 +7,7 @@ using namespace std;
 
 // Constructeur de Patient
 Patient::Patient() {};
-Patient::Patient(int groupe, char numero, string nom, string prenom, string adresse, bool sexe, int num){
+Patient::Patient(int numero, char groupe, string nom, string prenom, string adresse, bool sexe, int num) : Personne(nom,prenom,adresse,sexe,num) {
 	Patient::setGroupeSanguin(groupe);
 	Patient::setNumeroSecuriteSociale(numero);
 };
