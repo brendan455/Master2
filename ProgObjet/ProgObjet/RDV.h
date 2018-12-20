@@ -19,7 +19,7 @@ class RDV
 
 	public: // Méthodes
 		RDV();
-		RDV(Medecin, list<Prescription>, Date);
+		RDV(Medecin, std::list<Prescription>, Date);
 		RDV(Medecin, Date);
 
 

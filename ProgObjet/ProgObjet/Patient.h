@@ -15,8 +15,8 @@ class Patient : public Personne
 	public: // Méthodes
 		// Constructeur
 		Patient();
-		Patient(int groupe, char numero, string nom, string prenom, string adresse, bool sexe, int num) : Personne(nom, prenom, adresse, sexe, num) {};
-		
+		Patient(int numero, char groupe, std::string nom, std::string prenom, std::string adresse, bool sexe, int num);
+
 		// Accesseurs
 		int getNumeroSecuriteSociale();
 		void setNumeroSecuriteSociale(int);

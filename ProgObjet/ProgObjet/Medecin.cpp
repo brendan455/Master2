@@ -7,7 +7,7 @@ using namespace std;
 Medecin::Medecin() {};
 
 // Constructeur de Medecin
-Medecin::Medecin( string specialite, int numeroOrdreMedecin , string nom, string prenom, string adresse, bool sexe, int num){
+Medecin::Medecin( string specialite, int numeroOrdreMedecin, string nom, string prenom, string adresse, bool sexe, int num) : Personne(nom, prenom,adresse, sexe, num){
 	Medecin::setSpecialite(specialite);
 	Medecin::setnumeroOrdreMedecin(numeroOrdreMedecin);
 };

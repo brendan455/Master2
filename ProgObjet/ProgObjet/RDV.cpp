@@ -46,8 +46,7 @@ Date RDV::getDateRdv(){
 	
 // Affichage
 void RDV::afficherBilanRdv(){
-	cout << "le RDV avec le docteur " << RDV::getMedecin().getnomMedecin() << " a donné lieu à "
-		<< RDV::getPrescriptions().size() << endl ;
+	cout << "     le RDV avec le docteur " << RDV::getMedecin().getPrenom() << " " << getMedecin().getNom() <<  " a donné lieu à " << RDV::getPrescriptions().size() << endl ;
 	cout << " le RDV à eu lieu le " << endl ;
-	getDateRdv().affichage2();	
+	getDateRdv().affichage2();
 };

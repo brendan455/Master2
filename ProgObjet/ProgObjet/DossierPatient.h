@@ -11,7 +11,7 @@
 class DossierPatient
 {
 	private: // Attributs
-		list<RDV> rdvs;
+		std::list<RDV> rdvs;
 		Patient patient;
 
 
@@ -19,7 +19,7 @@ class DossierPatient
 		// Constructeur
 		DossierPatient();
 		DossierPatient(Patient);
-		DossierPatient(list<RDV>,Patient);
+		DossierPatient(std::list<RDV>,Patient);
 		
 		// Affichage
 		void afficherDossierPatient();
@@ -27,6 +27,6 @@ class DossierPatient
 		// Accesseurs
 		void setPatient(Patient);
 		Patient getPatient();
-		void setRdvs(list<RDV>);
-		list<RDV> getRdvs();
+		void setRdvs(std::list<RDV>);
+		std::list<RDV> getRdvs();
 };
