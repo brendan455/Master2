@@ -10,66 +10,66 @@ using namespace std;
 
 
 Date::Date() {}
-Date::Date(int month, int day, int year){   
-    while (year < 1900 || year > 2100) {
-        cout << "Année Invalide, veuillez saisir une année comprise entre 1900 et 2100" << endl;
-        cin >> year;
-    }
-    while (month < 1 || month > 12) {
-        cout << "Mois Invalide, veuillez saisir un mois compris entre 1 et 12" << endl;
-        cin >> month;
-    }
-    if (month == 1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 10 || month == 12) {
-        while (day < 1 || day > 31) {
-            cout << "Jour Invalide, veuillez saisir un jour compris entre 1 et 31" << endl;
-            cin >> day;
-        }
-    }
-    else {
-        if (month != 2) {
-            while (day < 1 || day > 30) {
-                cout << "Jour Invalide, veuillez saisir un jour compris entre 1 et 30" << endl;
-                cin >> day;
-            }
-        }
-        else {
-            if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
-                while (day < 1 || day > 29) {
-                    cout << "Jour Invalide, veuillez saisir un jour compris entre 1 et 29" << endl;
-                    cin >> day;
-                }
-            }
-            else {
-                while (day < 1 || day > 28) {
-                    cout << "Jour Invalide, veuillez saisir un jour compris entre 1 et 28" << endl;
-                    cin >> day;
-                }
-            }
-        }
-    }
-    Date::setMonth(month);
-    Date::setDay(day);
-    Date::setYear(year);
+Date::Date(int month, int day, int year){	
+	while (year < 1900 || year > 2100) {
+		cout << "Année Invalide, veuillez saisir une année comprise entre 1900 et 2100" << endl;
+		cin >> year;
+	}
+	while (month < 1 || month > 12) {
+		cout << "Mois Invalide, veuillez saisir un mois compris entre 1 et 12" << endl;
+		cin >> month;
+	}
+	if (month == 1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 10 || month == 12) {
+		while (day < 1 || day > 31) {
+			cout << "Jour Invalide, veuillez saisir un jour compris entre 1 et 31" << endl;
+			cin >> day;
+		}
+	}
+	else {
+		if (month != 2) {
+			while (day < 1 || day > 30) {
+				cout << "Jour Invalide, veuillez saisir un jour compris entre 1 et 30" << endl;
+				cin >> day;
+			}
+		}
+		else {
+			if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
+				while (day < 1 || day > 29) {
+					cout << "Jour Invalide, veuillez saisir un jour compris entre 1 et 29" << endl;
+					cin >> day;
+				}
+			}
+			else {
+				while (day < 1 || day > 28) {
+					cout << "Jour Invalide, veuillez saisir un jour compris entre 1 et 28" << endl;
+					cin >> day;
+				}
+			}
+		}
+	}
+	Date::setMonth(month);
+	Date::setDay(day);
+	Date::setYear(year);
 };
 
-    //Accesseur
+	//Accesseur
 void Date::setDay(int day){
-    this->day=day;
+	this->day=day;
 };
 int Date::getDay(){
-    return this->day;
+	return this->day;
 };
 void Date::setMonth(int month){
-    this->month=month;
+	this->month=month;
 };
 int Date::getMonth(){
-    return this->month;
+	return this->month;
 };
 void Date::setYear(int year){
-    this->year=year;
+	this->year=year;
 };
 int Date::getYear(){
-    return this->year;
+	return this->year;
 };
 
 // Affichage d'une date au format XX/XX/XXXX
@@ -86,55 +86,55 @@ void Date::affichage2()
     switch(getMonth())
     {
         case 1:
-            month ="January";
+			month ="January";
             break;
 
         case 2:
-            month ="February";
+			month ="February";
             break;
 
         case 3:
-            month ="March";
+			month ="March";
             break;
 
         case 4:
-            month ="April";
+			month ="April";
             break;
 
         case 5:
-            month ="May";
+			month ="May";
             break;
 
         case 6:
-            month ="June";
+			month ="June";
             break;
 
         case 7:
-            month ="July";
+			month ="July";
             break;
 
         case 8:
-            month ="August";
+			month ="August";
             break;
 
         case 9:
-            month ="September";
+			month ="September";
             break;
 
         case 10:
-            month ="October";
+			month ="October";
             break;
 
         case 11:
-            month ="November";
+			month ="November";
             break;
 
         case 12:
-            month ="December";
+			month ="December";
             break;
     }
 
-    cout << day << '/' << month << '/' << year;
+	cout << day << '/' << month << '/' << year;
 }
 
 // Affichage d'une date au format MOIS/XX/XXXX

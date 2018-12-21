@@ -79,10 +79,10 @@ DossierPatient enregisterNouveauPatient(CabinetMedical cabinet) {
 		}
 	}
 
-	NewPatient = Patient::Patient(groupePatient, numPatient, nomPatient, prenomPatient, adrPatient, sexePatient, telPatient);
+	NewPatient = Patient::Patient(numPatient, groupePatient , nomPatient, prenomPatient, adrPatient, sexePatient, telPatient);
 	nouveauDossier = DossierPatient::DossierPatient(NewPatient);
 
-	cout << "\n Le Dossier de Monsieur " << prenomPatient << " " << nomPatient << " a ete cree" << endl;
+	cout << "\n Le Dossier de Monsieur " << nouveauDossier.getPatient().getPrenom() << " " << nomPatient << " a ete cree" << endl;
 	return nouveauDossier;
 
 };
@@ -274,101 +274,104 @@ void run() {
 
 				switch (menuChoice) {
 
-					//done
-				case(1):
-					cout << "\n Enregistrement patient" << endl;
-					nouveauDossier = enregisterNouveauPatient(cabinet);
-					if (cabinet.getDossiersPatient().empty()) {
-						newcab = CabinetMedical(cabinet.getNomCabinet(),cabinet.getAdresseCabinet(),cabinet.getMedecins(), InitList.push_back(nouveauDossier))
-						cabinet.getDossiersPatient().empl
-					}
-					else {
-						cabinet.getDossiersPatient().push_back(nouveauDossier);
-					}
-					break;
-					//No
-				case(2):
-					/*	cout << "Suppression patient" << endl;
+						//done
+					case(1):
+						cout << "\n Enregistrement patient" << endl;
+						nouveauDossier = enregisterNouveauPatient(cabinet);
+						cout << nouveauDossier.getPatient().getNom() << endl;
+						InitList = cabinet.getDossiersPatient();
+						InitList.push_back(nouveauDossier);
+						cabinet.setDossiersPatient(InitList);
+						break;
+						//No
+					case(2):
+						/*	cout << "Suppression patient" << endl;
 
-						reponseInt=1;
-						while (!test && reponseInt != 0) {
-							cout << "Saisissez le numero du medecin à supprimer" << endl;
+							reponseInt=1;
+							while (!test && reponseInt != 0) {
+								cout << "Saisissez le numero du medecin à supprimer" << endl;
+								cin >> reponseInt;
+								for (list<Medecin>::iterator it = cabinet.getMedecins().begin(); it != cabinet.getMedecins().end(); ++it) {
+									nouveauMedecin = *it;
+									if (nouveauMedecin.getNumeroOrdreMedecin() == (reponseInt)) {
+										test = true;
+										break;
+									}
+								}
+								if (!test && reponseInt != 0) {
+									cout << "numero invalide, veuillez réessayer ou tapez 0 pour retourner au menu." << endl;
+								}
+								else{
+									cabinet.getMedecins().erase(it);
+								}
+							}
+					case(3):
+							cout << "Modification patient, taper 0 pour annuler." << endl;
+
+							reponseInt=1;
+							while (!test && reponseInt != 0) {
+								cout << "Saisissez le numero du medecin à modifier" << endl;
+								cin >> reponseInt;
+								for (list<Medecin>::iterator it = cabinet.getMedecins().begin(); it != cabinet.getMedecins().end(); ++it) {
+									nouveauMedecin = *it;
+									if (nouveauMedecin.getNumeroOrdreMedecin() == (reponseInt)) {
+										test = true;
+										break;
+									}
+								}
+								if (!test && reponseInt != 0) {
+									cout << "numero invalide, veuillez réessayer ou tapez 0 pour retourner au menu." << endl;
+								}
+								else{
+									cabinet.getMedecins().erase(it);
+									cabinet.
+								}
+						break;
+							} */
+
+					case(4):
+						cout << "\n Affichage des Dossiers Patients" << endl;
+						if (!cabinet.getDossiersPatient().empty() ) {
+							cout << " Veuillez saisir le numero de securite sociale du patient que vous recherchez" << endl;
 							cin >> reponseInt;
-							for (list<Medecin>::iterator it = cabinet.getMedecins().begin(); it != cabinet.getMedecins().end(); ++it) {
-								nouveauMedecin = *it;
-								if (nouveauMedecin.getNumeroOrdreMedecin() == (reponseInt)) {
-									test = true;
-									break;
+							getline(cin, captage);
+							test = false;
+							if (reponseInt != 0 && cabinet.getDossiersPatient().size()>1) {
+								for (list<DossierPatient>::iterator it = cabinet.getDossiersPatient().begin(); it != cabinet.getDossiersPatient().end(); ++it) {
+									nouveauDossier = *it;
+									if (nouveauDossier.getPatient().getNumeroSecuriteSociale() == (reponseInt)) {
+										test = true;
+										break;
+									}
 								}
-							}
-							if (!test && reponseInt != 0) {
-								cout << "numero invalide, veuillez réessayer ou tapez 0 pour retourner au menu." << endl;
-							}
-							else{
-								cabinet.getMedecins().erase(it);
-							}
-						}
-				case(3):
-						cout << "Modification patient, taper 0 pour annuler." << endl;
-
-						reponseInt=1;
-						while (!test && reponseInt != 0) {
-							cout << "Saisissez le numero du medecin à modifier" << endl;
-							cin >> reponseInt;
-							for (list<Medecin>::iterator it = cabinet.getMedecins().begin(); it != cabinet.getMedecins().end(); ++it) {
-								nouveauMedecin = *it;
-								if (nouveauMedecin.getNumeroOrdreMedecin() == (reponseInt)) {
-									test = true;
-									break;
+								if (test) {
+									nouveauDossier.afficherDossierPatient();
 								}
-							}
-							if (!test && reponseInt != 0) {
-								cout << "numero invalide, veuillez réessayer ou tapez 0 pour retourner au menu." << endl;
-							}
-							else{
-								cabinet.getMedecins().erase(it);
-								cabinet.
-							}
-					break;
-						} */
-
-				case(4):
-					cout << "\n Affichage des Dossiers Patients" << endl;
-					if (!cabinet.getDossiersPatient().empty()) {
-						cout << " Veuillez saisir le numero de securite sociale du patient que vous recherchez" << endl;
-						cin >> reponseInt;
-						getline(cin, captage);
-						test = false;
-						if (reponseInt != 0) {
-							for (list<DossierPatient>::iterator it = cabinet.getDossiersPatient().begin(); it != cabinet.getDossiersPatient().end(); ++it) {
-								nouveauDossier = *it;
-								if (nouveauDossier.getPatient().getNumeroSecuriteSociale() == (reponseInt)) {
-									test = true;
-									break;
+								else {
+									cout << " Numero inexistant, Operation impossible, veuillez entrer un numero existant" << endl;
 								}
-							}
-							if (test) {
-								nouveauDossier.afficherDossierPatient();
 							}
 							else {
-								cout << " Numero inexistant, Operation impossible, veuillez entrer un numero existant" << endl;
+								if (reponseInt == 0) {
+									cout << "Numero de securite sociale egal à 0, Operation impossible, veuillez entrer un numero valide" << endl;
+								}
+								else {
+									nouveauDossier = cabinet.getDossiersPatient().front();
+									nouveauDossier.afficherDossierPatient();
+								}
 							}
 						}
 						else {
-							cout << "Numero de securite sociale egal à 0, Operation impossible, veuillez entrer un numero valide" << endl;
+							cout << "Pas de dossiers patients cree" << endl;
 						}
+						break;
 					}
-					else {
-						cout << "Pas de dossiers patients cree" << endl;
-					}
-					break;
-				}
-			}break;
-	
+				}break;
 
-			//4 Afficher dossier patient
-			//5 Retour
-	//no
+
+				//4 Afficher dossier patient
+				//5 Retour
+		//no
 		case(2):
 			//2 Gestion medecin
 			menuChoice = 0;
@@ -498,11 +501,11 @@ void run() {
 			break;
 
 		}
-	};
+	}
 };
 	// No
 //done
-int main( int argc, const char* argv []){
+int main(){
   run();
   return 0;
 };
