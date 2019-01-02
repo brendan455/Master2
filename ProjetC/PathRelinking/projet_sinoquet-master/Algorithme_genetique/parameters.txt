@@ -1,0 +1,17 @@
+# number of individuals (i.e., solutions) in each population
+n 50
+
+# maximal number of iterations (i.e., successive populations)
+n_it 10
+
+# number of parents to be selected in current population
+n_pairs_selected_parents 10
+
+# probability that a child be subject to a mutation
+prob_mutation 0.01
+
+# maximal number of distinct best individuals in the last population
+k 15
+
+# number of wanted SNP
+snp 3

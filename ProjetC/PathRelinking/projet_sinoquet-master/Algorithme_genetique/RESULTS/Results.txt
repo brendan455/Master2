@@ -1,0 +1,28 @@
+Parameters used :
+
+	Number of individuals in each population n = 50
+	Number of iteration n_it = 10
+	Number of pairs of parents n_pairs_selected_parents = 10
+	Mutation probability prob_mutation = 0.01
+	Number of best individuals k = 15
+	Number of SNP snp = 3
+
+
+
+Best solutions are : 
+
+{N20,N97,X1}	Score = 5.55112e-16
+{N37,N74,X1}	Score = 1.1654e-11
+{N1,N74,X1}	Score = 2.24303e-11
+{N6,N42,X1}	Score = 6.14313e-11
+{N42,N43,X1}	Score = 9.63051e-11
+{N52,N71,X1}	Score = 1.60824e-10
+{N51,N96,X1}	Score = 2.2761e-10
+{N12,N16,X1}	Score = 3.17295e-10
+{N10,N16,X1}	Score = 4.70102e-10
+{N44,N58,X1}	Score = 5.81022e-10
+{N33,N44,X1}	Score = 1.74254e-09
+{N16,N68,X1}	Score = 2.19491e-09
+{N19,N88,X1}	Score = 2.20044e-09
+{N24,N40,X1}	Score = 2.26095e-09
+{N20,N96,X1}	Score = 3.0054e-09
