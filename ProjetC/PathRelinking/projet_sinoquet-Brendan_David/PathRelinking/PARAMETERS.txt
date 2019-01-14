@@ -1,0 +1,29 @@
+# number of header lines in the genotype file
+header 1
+
+# separation between fields in the genotype file
+separator ,
+
+# number of individuals(i.e., solutions) in each population
+n 5
+
+# maximal number of iterations(i.e., successive populations)
+n_it 30
+
+# number of individuals in the comparison set
+nc 10
+
+# number of tournaments for each iteration
+nt 5
+
+# probability that a child be subject to a mutation
+prob_mutation 0,05
+
+# frequency to operate niching. Niching is computationally expensive
+freq_niching 0,01
+
+# Valor of alpha in GRASP algorithm
+alpha_rate 0,02
+
+
+
