@@ -25,7 +25,7 @@ class Medecin : public Personne
 
 
 		// Affichage
-		//void afficherMedecin();
+		void afficherMedecin();
 		//void afficherMedecinFichier(std::string);
 };
 

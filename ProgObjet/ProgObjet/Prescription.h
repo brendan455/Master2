@@ -19,29 +19,29 @@ class Prescription
 		std::string typeDePrescripiton;
 		Posologie posologie;
 		Date dateDePrescription;
-		std::list<Medicament> medicaments;
+		Medicament medicaments;
 
 
 	public: // Méthodes
 		// Constructeur
 		Prescription();
-		Prescription(std::string,Posologie,Date, std::list<Medicament>);
+		Prescription(std::string,Posologie,Date,Medicament);
 
 	
 		// Accesseurs
 		std::string getTypePrescription();
 		void setTypePrescription(std::string);
-		std::list<Medicament> getMedicaments();
-		void setMedicaments(std::list<Medicament>);
+		Medicament getMedicaments();
+		void setMedicaments(Medicament);
 		Posologie getPosologie();
 		void setPosologie(Posologie);
 		Date getDatePrescription();
 		void setDatePrescription(Date);
 	
 		// Affichage
-/*		void afficherPrescription();
+		void afficherPrescription();
 		
-	*/	
+		
 		
 };
 

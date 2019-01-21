@@ -21,7 +21,9 @@ DossierPatient::DossierPatient(list<RDV> rdvs, Patient patient){
 
 // Affichage d'un objet de type DossierPatient
 void DossierPatient::afficherDossierPatient(){
+	list<RDV> rdvs;
 	RDV dossierCourant;
+	list<RDV> rendezvous;
 	cout << "    Dossier de " << getPatient().getNom() << " " << getPatient().getPrenom() << endl;
 	if (getPatient().getSexe()) {
 		cout << "    Sexe : Femme"  << endl;
@@ -33,10 +35,11 @@ void DossierPatient::afficherDossierPatient(){
 	cout << "    Groupe : " << getPatient().getGroupeSanguin() << endl;
 	cout << "    Telephone : " << getPatient().getNumeroDeTelephone() << endl;
 	cout << "    Adresse : " << getPatient().getAdresse() << endl;
-	if (!getRdvs().empty()) {
+	if (getRdvs().empty()) {
 		cout << "Pas de rendez vous actuellement" << endl;
 	} else {
-		for (list<RDV>::iterator it = getRdvs().begin(); it != getRdvs().end(); it++) {
+		rdvs = getRdvs();
+		for (list<RDV>::iterator it = rdvs.begin(); it != rdvs.end(); it++) {
 			dossierCourant = *it;
 			dossierCourant.afficherBilanRdv();
 		}

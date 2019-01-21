@@ -3,7 +3,6 @@
 #include "Date.h" 
 #include <iostream>
 #include <string>
-
 using namespace std;
 
 
@@ -11,18 +10,22 @@ using namespace std;
 
 Date::Date() {}
 Date::Date(int month, int day, int year){	
+	string captage;
 	while (year < 1900 || year > 2100) {
-		cout << "Année Invalide, veuillez saisir une année comprise entre 1900 et 2100" << endl;
+		cout << "Annee Invalide, veuillez saisir une annee comprise entre 1900 et 2100" << endl;
 		cin >> year;
+		getline(cin, captage);
 	}
 	while (month < 1 || month > 12) {
 		cout << "Mois Invalide, veuillez saisir un mois compris entre 1 et 12" << endl;
 		cin >> month;
+		getline(cin, captage);
 	}
 	if (month == 1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 10 || month == 12) {
 		while (day < 1 || day > 31) {
 			cout << "Jour Invalide, veuillez saisir un jour compris entre 1 et 31" << endl;
 			cin >> day;
+			getline(cin, captage);
 		}
 	}
 	else {
@@ -30,6 +33,7 @@ Date::Date(int month, int day, int year){
 			while (day < 1 || day > 30) {
 				cout << "Jour Invalide, veuillez saisir un jour compris entre 1 et 30" << endl;
 				cin >> day;
+				getline(cin, captage);
 			}
 		}
 		else {
@@ -37,12 +41,14 @@ Date::Date(int month, int day, int year){
 				while (day < 1 || day > 29) {
 					cout << "Jour Invalide, veuillez saisir un jour compris entre 1 et 29" << endl;
 					cin >> day;
+					getline(cin, captage);
 				}
 			}
 			else {
 				while (day < 1 || day > 28) {
 					cout << "Jour Invalide, veuillez saisir un jour compris entre 1 et 28" << endl;
 					cin >> day;
+					getline(cin, captage);
 				}
 			}
 		}
@@ -134,7 +140,7 @@ void Date::affichage2()
             break;
     }
 
-	cout << day << '/' << month << '/' << year;
+	cout << day << '/' << month << '/' << year << endl;
 }
 
 // Affichage d'une date au format MOIS/XX/XXXX

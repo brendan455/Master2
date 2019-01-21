@@ -15,13 +15,13 @@ Patient::Patient(int numero, char groupe, string nom, string prenom, string adre
 
 // Accesseurs
 
-int Patient::getNumeroSecuriteSociale(){ // Récupérer les numéros de sécurité sociale d'un objet Patient
+int Patient::getNumeroSecuriteSociale(){ 
 	return this->numeroSecuriteSociale;
 };
 char Patient::getGroupeSanguin(){
 	return this->groupeSanguin;
 };
-void Patient::setNumeroSecuriteSociale(int numeroSecuriteSociale){ // Changer un numéro de sécurité sociale d'un objet Patient
+void Patient::setNumeroSecuriteSociale(int numeroSecuriteSociale){ 
 	this->numeroSecuriteSociale = numeroSecuriteSociale;
 };
 void Patient::setGroupeSanguin(char groupe){

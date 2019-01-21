@@ -9,18 +9,20 @@ using namespace std;
 // Code du contructeur de RDV
 		
 RDV::RDV() {};
-RDV::RDV(Medecin medecin, list<Prescription> prescriptions, Date date)
+RDV::RDV(Medecin medecin, list<Prescription> prescriptions, Date date, int ID)
 {
 	RDV::setMedecin(medecin);
 	RDV::setPrescriptions(prescriptions);
 	RDV::setDateRdv(date);
+	RDV::setID(ID);
 };
 
-RDV::RDV(Medecin medecin, Date date) {
+RDV::RDV(Medecin medecin, Date date, int ID) {
 	list<Prescription> prescriptions;
 	RDV::setMedecin(medecin);
 	RDV::setPrescriptions(prescriptions);
 	RDV::setDateRdv(date);
+	RDV::setID(ID);
 };
 
 
@@ -42,11 +44,30 @@ void RDV::setDateRdv(Date date){
 };
 Date RDV::getDateRdv(){
 	return this->dateRdv;
+}
+;
+void RDV::setID(int id) {
+	this->ID = id;
 };
+int RDV::getID() {
+	return this->ID;
+};
+
 	
 // Affichage
 void RDV::afficherBilanRdv(){
-	cout << "     le RDV avec le docteur " << RDV::getMedecin().getPrenom() << " " << getMedecin().getNom() <<  " a donné lieu à " << RDV::getPrescriptions().size() << endl ;
-	cout << " le RDV à eu lieu le " << endl ;
-	getDateRdv().affichage2();
+	list<Prescription> pres = getPrescriptions();
+	Prescription courant;
+	cout << "       le RDV avec le docteur " << RDV::getMedecin().getPrenom() << " " << getMedecin().getNom() <<  " a donne lieu a " << RDV::getPrescriptions().size() <<" Prescriptions"<< endl ;
+	cout << "       le RDV a eu lieu le ";
+	getDateRdv().affichage1();
+	if (!getPrescriptions().empty()) {
+		for (list<Prescription>::iterator it = pres.begin(); it != pres.end(); it++) {
+			courant = *it;
+			courant.afficherPrescription();
+		}
+	}
+	else {
+		cout << "       Il n'y a pas de prescription pour ce rendez vous a l'heure actuelle ";
+	}
 };

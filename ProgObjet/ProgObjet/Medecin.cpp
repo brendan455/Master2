@@ -15,35 +15,46 @@ Medecin::Medecin( string specialite, int numeroOrdreMedecin, string nom, string 
 
 // Accesseurs
 
-int Medecin::getnumeroOrdreMedecin(){ // Récupérer numéros d'ordre de Medecin
+int Medecin::getnumeroOrdreMedecin(){
 	return this->numeroOrdreMedecin;
 };
 
-string Medecin::getSpecialite(){ // Récupérer les specialités de Medecin
+string Medecin::getSpecialite(){
 	return this->specialite;
 };
 
-void Medecin::setnumeroOrdreMedecin(int numeroOrdreMedecin){ // Changer numéro d'ordre de medecin
+void Medecin::setnumeroOrdreMedecin(int numeroOrdreMedecin){
 	this->numeroOrdreMedecin=numeroOrdreMedecin;
 };
 
-void Medecin::setSpecialite(string specialite){ // Changer la spécialité d'un medecin
+void Medecin::setSpecialite(string specialite){ 
 	this->specialite=specialite;
 };
 
 // Affichage d'un objet de type Medecin
-/*void Medecin::afficherMedecin(){
-	cout << "	- Le nom du medecin est : " << Medecin::getnomMedecin() << "Le prénom du medecin est : " 
-		<< Medecin::getprenomMedecin() << "Le numéro d'ordre du medecin est : " 
-		<< Medecin::getnumeroOrdreMedecin() << " La spécialité du medecin est : " << Medecin::getSpecialite() << endl;	
-}*/
+void Medecin::afficherMedecin(){
+
+	cout << "    nom du medecin : " << Medecin::getNom() << endl;
+	cout << "    prenom du medecin : " << Medecin::getPrenom() << endl;
+	if (getSexe()) {
+		cout << "    Sexe : Femme" << endl;
+	}
+	else {
+		cout << "    Sexe : Homme" << endl;
+	}
+	cout << "    specialite : " << Medecin::getSpecialite() << endl;
+	cout << "    numero d'ordre du medecin : " << Medecin::getnumeroOrdreMedecin() << endl;
+	cout << "    adresse : " << Medecin::getAdresse() << endl;
+	cout << "    telephone : " << Medecin::getNumeroDeTelephone() << endl;
+	 
+}
 
 /*
 // A faire plus tard.
 // Enregistrer un objet de type Medecin dans un fichier
 void Medecin::afficherMedecinFichier(string nomFichier){
 	ofstream outputFile(nomFichier.c_str(), ios::app); // Ouvrir le fichier
-	if(outputFile){ // Si l'ouverture a fonctionnée, écrire à la suite le medecin
+	if(outputFile){ // Si l'ouverture a fonctionnee, ecrire à la suite le medecin
 		outputFile << "		* Le medecin est " << this->nom << endl;
 		outputFile.close(); // Fermer le fichier
 	}

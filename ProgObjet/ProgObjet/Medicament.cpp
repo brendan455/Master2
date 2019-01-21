@@ -16,39 +16,19 @@ Medicament::Medicament(string nom, string laboratoire){
 
 
 // Accesseurs
-string Medicament::getnomMedicament(){ // Récupérer les noms de Medicament
+string Medicament::getnomMedicament(){
 	return this->nom;
 };
 
-string Medicament::getlaboratoireMedicament(){ // Récupérer les laboratoires de Medicament
+string Medicament::getlaboratoireMedicament(){
 	return this->laboratoire;
 };
 
 
-void Medicament::setnomMedicament(string nom){ // Changer les noms de Medicament
+void Medicament::setnomMedicament(string nom){
 	this->nom=nom;
 };
 
-void Medicament::setlaboratoireMedicament(string laboratoire){ // Changer les laboratoires de Medicament
+void Medicament::setlaboratoireMedicament(string laboratoire){
 	this->laboratoire=laboratoire;
 };
-
-/*
-// Affichage d'un objet de type Medicament
-void Medicament::afficherMedicament(){
-	cout << "	- Le nom du médicament est : " << this->nom << "Le laboratoire qui fabrique le médicament est : " << this->laboratoire << endl;	
-}
-*/
-
-
-/*
-//<<<<<<<<<<<<<<<<<<<<<<<<<          A revenir dessus :                 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-// Enregistrer un objet de type Medicament dans un fichier
-void Medecin::afficherMedicamentFichier(string nomFichier){
-	ofstream outputFile(nomFichier.c_str(), ios::app); // Ouvrir le fichier
-	if(outputFile){ // Si l'ouverture a fonctionnée, écrire le nom du medicament
-		outputFile << "		* Le medicament est " << this->nom << endl;
-		outputFile.close(); // Fermer le fichier
-	}
-}
-*/

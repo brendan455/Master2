@@ -12,7 +12,7 @@ using namespace std;
 
 Prescription::Prescription() {};
 
-Prescription::Prescription(string typePrescription,Posologie posologie,Date dateDePrescription,list<Medicament> medicaments){
+Prescription::Prescription(string typePrescription,Posologie posologie,Date dateDePrescription,Medicament medicaments){
 	Prescription::setDatePrescription(dateDePrescription);
 	Prescription::setTypePrescription(typePrescription);
 	Prescription::setPosologie(posologie);
@@ -36,11 +36,11 @@ string Prescription::getTypePrescription(){
 void Prescription::setTypePrescription(string typePrescription){
 	this->typeDePrescripiton = typePrescription;
 }
-std::list<Medicament> Prescription::getMedicaments()
+Medicament Prescription::getMedicaments()
 {
 	return this->medicaments;
 };
-void Prescription::setMedicaments(std::list<Medicament> medicaments)
+void Prescription::setMedicaments(Medicament medicaments)
 {
 	this->medicaments = medicaments;
 };
@@ -51,7 +51,12 @@ void Prescription::setPosologie(Posologie posologie){
 	this->posologie = posologie;
 };
 
-/*void Prescription::afficherPrescription(){
-	cout << " La prescription est : " << this->posologie << end1 ;
-}; */
+void Prescription::afficherPrescription(){
+	cout << "        Type de Prescription "<< getTypePrescription() << endl ;
+	cout << "         Date : "; 
+	getDatePrescription().affichage1();
+	cout << "         Medicament : "<< getMedicaments().getnomMedicament() << endl;
+	cout << "         Laboratoire :"<< getMedicaments().getlaboratoireMedicament() << endl;
+	getPosologie().afficherPosologie();
+}; 
 

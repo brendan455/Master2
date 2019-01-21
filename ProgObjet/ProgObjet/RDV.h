@@ -15,12 +15,13 @@ class RDV
 		Medecin medecin;
 		std::list<Prescription> prescriptions;
 		Date dateRdv;
+		int ID;
 
 
 	public: // Méthodes
 		RDV();
-		RDV(Medecin, std::list<Prescription>, Date);
-		RDV(Medecin, Date);
+		RDV(Medecin, std::list<Prescription>, Date, int);
+		RDV(Medecin, Date, int);
 
 
 		
@@ -32,6 +33,8 @@ class RDV
 		std::list<Prescription> getPrescriptions();
 		void setDateRdv(Date);
 		Date getDateRdv();
+		int getID();
+		void setID(int);
 	
 		// Affichage
 		void afficherBilanRdv();
