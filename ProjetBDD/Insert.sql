@@ -1,3 +1,4 @@
+/* Partie II */
 /* Question 1 à 3 Partie 2 */
 
 INSERT INTO LIBELLE_GENRE(Genre,Libelle) VALUES ('REC','Recit');
