@@ -13,8 +13,8 @@ Instruction d'installation
 Nécessite l'accès à une base de données SQL Oracle. (Développé sous Oracle XE 
 V11.2 pour Winows 64-bit)
 
-Injécté dans la base le fichier PartI, puis Insert, ensuite PartII et 
-finalement PartIII.
+Injecter dans la base le fichier PartI, puis Insert, ensuite les fichier PartII
+jusqu'à PartVI.
 Pour purger la base Utilisez le fichier Drop.
 
 
