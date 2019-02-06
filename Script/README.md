@@ -20,7 +20,7 @@ Ce script nécessite d'être éxécuté avec python en version 2.7
 Projet
 ------------------------------------------------------------------------------
 
-Ce projet à été réalisé dans le cadre du master 2 de bioinformatique de l'
+Ce projet a été réalisé dans le cadre du master 2 de bioinformatique de l'
 université de Nantes, pour le module de langages de scripts.
 
 Ce script permet la lecture de fichier fasta afin de réaliser un alignement deux 
