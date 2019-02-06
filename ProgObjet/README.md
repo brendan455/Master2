@@ -1,7 +1,7 @@
 ******************************************************************************
 Projet Programmation Objet C++ Master 2 IB 2018/2019
 
-Auteur : DENIAUD B. - AIRAULT D.
+Auteur : AIRAULT D. & DENIAUD B.
 
 Licence : GNU GPL V3
 ******************************************************************************
