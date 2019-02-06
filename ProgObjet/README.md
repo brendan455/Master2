@@ -23,7 +23,7 @@ Pour supprimer l'éxécutable créé lors de la compilation, lancé la commande 
 Projet
 ------------------------------------------------------------------------------
 
-Ce projet à été réalisé dans le cadre du master 2 de bioinformatique de l'
+Ce projet a été réalisé dans le cadre du master 2 de bioinformatique de l'
 université de Nantes, pour le module de programmation objet.
 
 Ce programme codé en C++ permet de simuler la gestion d'un cabinet médical avec la prise de Rendez-vous et la gestion du personnel, ainsi que les patients du cabinet.
